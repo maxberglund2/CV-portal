@@ -6,23 +6,40 @@ body {
     justify-content: space-between;
     height: 100vh;
     color: white;
+    font-family: "Press Start 2P", cursive;
     background-color: rgb(31, 2, 43);
-    font-family: "Press Start 2P", cursive !important;
-    margin: 0;
-    padding: 0;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    border-bottom: 2px solid white;
 }
 footer {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.9);
+        background-blend-mode: overlay;
     padding: 15px;
-    border-top: 1px solid white;
+    border-top: 2px solid white;
+}
+
+.textLogo {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.easterEgg {
+    color: red;
 }
 
 nav {
+    border-top: 2px solid white;
     display: flex;
     justify-content: space-around;
 }
@@ -37,4 +54,33 @@ nav a {
 nav a:hover,nav a.active {
     background-color: white;
     color: black;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        border-left: none;
+        border-right: none;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
