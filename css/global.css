@@ -5,7 +5,8 @@ body {
     color: white;
     font-family: "Jersey 15", sans-serif;
     font-weight: 400;
-    background: url("../images/bg.jpg") center/cover;
+    /* background: url("../images/space.gif");
+    background-size: cover; */
     background-color: black;
     margin: 0;
     height: 100vh;
@@ -15,10 +16,13 @@ body {
 
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    border-bottom: 2px solid white;
+    background-color: black;
     font-family: "Pixelify Sans", sans-serif;
-    text-align: center;
+    border-bottom: 2px solid white;
+    width: 100%;
+    height: 6.5vh;
+    position:fixed;
+    top: 0;
 }
 
 .textLogo {
@@ -35,55 +39,49 @@ header {
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
+    font-family: "Pixelify Sans", sans-serif;
+    border-right: 2px solid white;
     border-top: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    height: 93.5vh;
+    position:fixed;
+    top: 6.5vh;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 15px 15px;
     transition: 0.3s;
     font-weight: bold;
+    width: 50%;
 }
 
 nav a:hover,
 nav a.active {
-    background: white;
-    color: black;
-    box-shadow: 0 0 5px white;
+    color: rgb(255, 0, 0);
+}
+
+nav p {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    height: 93.5vh;
 }
 
 /* Main Content */
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
+    width: 90%;
+    margin-top: 6.5vh;
+    margin-left: auto;
 }
 
-section {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-}
-
-/* Footer */
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    text-align: center;
-    padding: 15px;
-    border-top: 2px solid white;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -95,7 +93,7 @@ footer {
 
     nav a {
         width: 90%;
-        text-align: center;
+        
     }
 }
 

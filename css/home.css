@@ -3,3 +3,38 @@
     margin-bottom: 1em;
     text-align: center;
 }
+
+.idkImg {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.homeMain {
+    height: 93.5vh;
+    /* Full height minus header */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.upperSection,
+.splitSection {
+    height: 48%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.upperSection div {
+    background-color: rgb(30, 30, 30);
+    height: 100%;
+    width: 97.5%;
+}
+
+.splitSection div {
+    width: 48%;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
