@@ -1,40 +1,23 @@
-.introText {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-.idkImg {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-}
-
-.homeMain {
-    height: 93.5vh;
-    /* Full height minus header */
+.doubleSection {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.upperSection,
-.splitSection {
-    height: 48%;
-    display: flex;
-    justify-content: space-evenly;
+.doubleSection section {
+    max-width: 49.5%;
+    min-width: 49.5%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.upperSection div {
-    background-color: rgb(30, 30, 30);
-    height: 100%;
-    width: 97.5%;
-}
+@media (max-width: 768px) {
+    .doubleSection {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.splitSection div {
-    width: 48%;
-    background-color: rgb(30, 30, 30);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .doubleSection section {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
