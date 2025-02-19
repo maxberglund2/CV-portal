@@ -1,6 +1,8 @@
 .doubleSection {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: 100%;
 }
 
 .doubleSection section {
@@ -10,6 +12,13 @@
     box-sizing: border-box;
 }
 
+.socialsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Adjust for responsiveness */
 @media (max-width: 768px) {
     .doubleSection {
         flex-direction: column;
