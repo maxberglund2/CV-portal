@@ -1,33 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    async function fetchRepositories(username, token) {
+    async function fetchRepositories(username) {
         const url = `https://api.github.com/users/${username}/repos`;
         try {
-            const response = await fetch(url, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
+            const response = await fetch(url);
             if (!response.ok) {
-                throw new Error('Failed to fetch repositories');
+                throw new Error(`Failed to fetch repositories: ${response.status} ${response.statusText}`);
             }
             const repositories = await response.json();
             return repositories;
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error fetching repositories:', error);
             return [];
         }
     }
 
-    const username = 'maxberglund2';
-    const token = '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';
-    fetchRepositories(username, token).then(repos => {
-        displayRepositories(repos);
-        displayHighlightedRepositories(repos);
-    });
-
     function displayRepositories(repositories) {
         const container = document.querySelector('#all-projects');
-        container.innerHTML = '';
+        if (!container) return;
+
+        container.innerHTML = ''; 
+
+        if (repositories.length === 0) {
+            container.innerHTML = '<p>No repositories found.</p>';
+            return;
+        }
 
         repositories.forEach(repo => {
             const portfolioItem = createPortfolioItem(repo);
@@ -38,15 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayHighlightedRepositories(repositories) {
         const highlightedContainer = document.querySelector('#highlighted-projects');
         if (!highlightedContainer) return;
+
         highlightedContainer.innerHTML = '';
 
         const highlightedRepos = ["Critter", "OtakuStyle", "greenTech", "KyotoInc"];
 
-        repositories.forEach(repo => {
-            if (highlightedRepos.includes(repo.name)) {
-                const portfolioItem = createPortfolioItem(repo);
-                highlightedContainer.appendChild(portfolioItem);
-            }
+        const filteredRepos = repositories.filter(repo => highlightedRepos.includes(repo.name));
+
+        if (filteredRepos.length === 0) {
+            highlightedContainer.innerHTML = '<p>No highlighted repositories found.</p>';
+            return;
+        }
+
+        filteredRepos.forEach(repo => {
+            const portfolioItem = createPortfolioItem(repo);
+            highlightedContainer.appendChild(portfolioItem);
         });
     }
 
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const projectName = document.createElement('p');
         projectName.textContent = repo.name;
-        
+
         portfolioItem.appendChild(githubIcon);
         portfolioItem.appendChild(projectName);
 
@@ -69,4 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return portfolioItem;
     }
+
+    const username = 'maxberglund2';
+    fetchRepositories(username).then(repos => {
+        displayRepositories(repos);
+        displayHighlightedRepositories(repos);
+    });
 });

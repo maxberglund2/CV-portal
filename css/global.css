@@ -101,9 +101,12 @@ nav div {
     background-color: burlywood;
 }
 
-nav a:hover,
+nav a:hover {
+    background-color: #555;
+}
 nav a.active {
     background-color: #555;
+    color: greenyellow;
 }
 
 nav p {
@@ -155,6 +158,10 @@ hr {
     color: #555;
     line-height: 1.6;
     margin-bottom: 30px;
+}
+
+i {
+    color: whitesmoke;
 }
 
 /* Responsive Design */
