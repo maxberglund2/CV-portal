@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('./modal.css');
 
 *,
 ::after,
@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 2px solid #555;
     width: 100%;
     height: 6.5vh;
@@ -97,10 +98,6 @@ nav a {
     color:whitesmoke;
 }
 
-nav div {
-    background-color: burlywood;
-}
-
 nav a:hover {
     background-color: #555;
 }
@@ -122,6 +119,7 @@ nav p:last-child {
 }
 
 main {
+    background-color: rgb(12, 12, 12);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -155,7 +153,7 @@ hr {
 .textDescription {
     text-align: center;
     font-size: 1.1rem;
-    color: #555;
+    color: #a3a3a3;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -210,4 +208,17 @@ i {
     footer {
         padding: 10px;
     }
+}
+
+.invert-colors {
+    filter: invert(75%);
+}
+
+.easterEggButton {
+    position: fixed;
+    bottom: 0;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    z-index: 1000;
 }
