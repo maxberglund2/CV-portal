@@ -1,0 +1,28 @@
+.socialsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.socialLink:hover {
+    transform: scale(1.05);
+}
+
+.socialLink i {
+    transition: transform 0.3s;
+}
+
+.socialLink:hover i {
+    transform: rotate(360deg);
+}
