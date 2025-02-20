@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
@@ -9,6 +8,8 @@ body {
 
 body {
     color:whitesmoke;
+    font-size: 1.1rem;
+    line-height: 1.6;
     font-family: "Kanit", serif;
     font-weight: 200;
     font-style: normal;
@@ -26,16 +27,19 @@ h1, h2, h3, h4, h5, h6 {
 header {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #555;
     width: 100%;
     height: 6.5vh;
     position:fixed;
     top: 0;
     background-color: rgb(12, 12, 12);
+    z-index: 10;
 }
 
 .textLogo {
-    font-size: 2em;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin: 15px;
     text-shadow: 2px 2px 4px black;
     display: flex;
@@ -47,7 +51,7 @@ header {
 
 /* Easter Egg Letter */
 .easterEgg {
-    color: red;
+    color:greenyellow;
 }
 
 /* Navigation */
@@ -65,17 +69,18 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    min-width: 10%;
     height: 93.5vh;
     position:fixed;
     top: 6.5vh;
-    border-right: 2px solid #333;
+    border-right: 2px solid #555;
     background-color: rgb(12, 12, 12);
 }
 
 nav a {
     text-decoration: none;
     padding: 15px 15px;
+    width: 100%;
     font-weight:400;
     color:whitesmoke;
 }
@@ -86,17 +91,7 @@ nav div {
 
 nav a:hover,
 nav a.active {
-    font-weight: bold;
-}
-
-nav a:hover::before,
-nav a.active::before {
-    content: "→ ";
-}
-
-nav a:hover::after,
-nav a.active::after {
-    content: " ←";
+    background-color: #555;
 }
 
 nav p {
@@ -105,6 +100,10 @@ nav p {
     font-family: "Kanit", serif;
     font-weight: 400;
     font-style: normal;
+}
+nav p:last-child {
+    font-size: 0.6rem;
+    font-weight: 100;
 }
 
 main {
@@ -124,19 +123,26 @@ section {
     padding: 20px;
 }
 
+hr {
+    width: 100%;
+    border: 1px solid #555;
+    display: block;
+    margin-bottom: 20px;
+}
+
 .textHeader {
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    color: greenyellow;
+    margin-bottom: 10px;
 }
 .textDescription {
     text-align: center;
     font-size: 1.1rem;
     color: #555;
-    margin-bottom: 30px;
     line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 /* Responsive Design */
@@ -167,6 +173,15 @@ section {
 @media (max-width: 480px) {
     .textLogo {
         font-size: 1.5em;
+    }
+    .textHeader {
+        font-size: 2em;
+    }
+    .textDescription {
+        font-size: 1em;
+    }
+    body {
+        font-size: 1em;
     }
 
     section {

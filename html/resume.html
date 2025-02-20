@@ -7,6 +7,8 @@
     <title>Max Berglund</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/resume.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="/scripts/script.js" defer></script>
 </head>
 
@@ -14,7 +16,7 @@
     <header>
         <div class="textLogo">
             <div class="navButton">☰</div>
-            <h1><span class="easterEgg">M</span>ax Berglund</h1>
+            <h1>Ma<span class="easterEgg">x</span> Berglund</h1>
         </div>
     </header>
     <nav>
@@ -26,22 +28,135 @@
         <p>&copy; 2025 Max Berglund</p>
     </nav>
     <main>
-        <section>
-            <h2>A Sojourn Into My Craft</h2>
-            <p>Hail, traveler, and be thee welcome to this modest archive of mine own making, where words and works
-                alike stand as
-                echoes of my toil. Lo, but twenty summers have I weathered, and with steady hand do I seek to carve my
-                place amidst
-                the
-                boundless expanse of the machine-mind’s domain. A humble architect of logic, a fledgling weaver of code,
-                I labor yet
-                to
-                shape order from chaos, to bend the silent will of metal and mind alike. Herein shalt thou find a record
-                of my
-                endeavors—projects wrought by mine own hand, each a stepping stone upon the path I tread. Peruse,
-                shouldst thou will
-                it,
-                and glimpse the forging of a journey yet unfurled.</p>
+        <section class="resumeSection">
+            <div class="leftResume">
+                <img class="personalPicture" src="../images/defaultAvatar.jpg" alt="Picture of Max Berglund">
+                <p style="align-self: center;">2004.03.15</p>
+                <h2 class="textHeader" style="align-self: center; margin-bottom: 40px;">Max Berglund</h2>
+
+                <h3>Languages</h3>
+                <ul>
+                    <li>Swedish (Native)</li>
+                    <li>English (Fluent)</li>
+                </ul>
+                <hr style="margin-top: 20px;">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Responsibility</li>
+                    <li>Communication</li>
+                    <li>Goal-oriented</li>
+                    <li>Efficiency</li>
+                    <li>Teamwork</li>
+                </ul>
+                <hr style="margin-top: 20px;">
+                <h3>Technical Skills</h3>
+                <div class="techSkills">
+                    <ul>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>C#</li>
+                    </ul>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>React.js</li>
+                        <li>Typescript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightResume">
+                <h2 class="textHeader">Personal Statement</h2>
+                <p class="textDescription">My curiosity for technology and problem-solving has driven me to explore
+                various fields, from hardware and software to teamwork and project
+                management. I enjoy learning new things and adapting to different work
+                environments, which helps me develop both technical and communication skills.
+                Regardless of the setting, I appreciate the opportunity to take on challenges,
+                solve problems, and work in a dynamic environment where I can contribute and
+                grow.</p>
+
+                <h2 class="textHeader">Career Goals</h2>
+                <p class="textDescription">I value experience and see every work opportunity as a chance to develop both
+                professionally and personally. I am open to various roles where I can contribute
+                with my engagement, adaptability, and interest in technology and effective
+                collaboration. My ambition is to broaden my skills and gather experiences that
+                will shape my future career.</p>
+
+                <hr>
+
+                <h2 class="textHeader">Work Experience</h2>
+                <p>2024</p>
+                <h3>Internship as Mobile App Developer at 2witness</h3>
+                <p class="textDescription">I have been actively engaged in a team of interns developing a mobile application.
+                Initially, my role focused on backend development, but it later expanded to include
+                frontend tasks. This hands-on experience has helped me improve my programming
+                skills. The collaboration within the internship team has significantly enhanced my
+                communication and teamwork skills, fostering an environment for tackling challenges
+                and working efficiently.</p>
+
+                <p>2024</p>
+                <h3>Internship at National Institute of Technology, Ariake College
+                (Fukuoka, Japan)</h3>
+                <p class="textDescription">As part of a dynamic exchange program in Fukuoka, Japan, I completed a rewarding
+                two-week internship. I delved into the latest tech trends, where I had the opportunity
+                to work with image recognition using Python. This experience not only expanded my
+                technical knowledge but also provided valuable insights into cutting-edge technologies
+                within an international setting. Additionally, it sparked my strong interest in exploring
+                future career opportunities in global teams and cross-cultural collaboration.</p>
+
+                <p>2020</p>
+                <h3>Sanitation Worker</h3>
+                <p class="textDescription">My experience as a sanitation worker during the spring of 2020 strengthened my work
+                ethic and proactive approach to tasks, contributing to a cleaner environment in the
+                community.</p>
+
+                <p>2020</p>
+                <h3>High School Teaching Assistant</h3>
+                <p class="textDescription">As a high school teaching assistant, I handled a variety of tasks. My responsibilities
+                included administrative duties such as document management, effective
+                communication handling, and ensuring academic needs were met.</p>
+
+                <hr>
+
+                <h2 class="textHeader">Education</h2>
+                <p>2024 - Present | Stockholm</p>
+                <h3>Chas Academy (Fullstack .NET)</h3>
+                <small>Higher Vocational Education Diploma</small>
+                <p class="textDescription">At Chas Academy, I am deepening my knowledge in .NET development with a focus on
+                both frontend and backend. The curriculum covers technologies like JavaScript,
+                various JavaScript frameworks, databases, and application development with C# and
+                Microsoft's .NET framework. I am learning how to create and maintain web and
+                software solutions, work with APIs and microservices, and improve testing and
+                debugging skills. Through practical projects and teamwork, I am gaining business
+                insights and building a strong foundation for a career in .NET development.</p>
+
+                <p>2023 - 2024 | Stockholm</p>
+                <h3>NTI Gymnasiet Södertörn (TE4) - Highschool Engineering Program</h3>
+                <small>High school engineering degree</small>
+                <p class="textDescription">In my fourth technical year (TE4), I specialized in practical aspects of programming,
+                focusing on web development and various work methods such as Agile and the
+                Waterfall model. This included practical experience with the MERN stack (MongoDB,
+                Express.js, React.js, and Node.js). Through individual and group projects, I built
+                websites from the ground up or contributed to existing projects. This program
+                provided valuable opportunities to improve coding skills and teamwork.</p>
+
+                <p>2020 - 2023 | Stockholm</p>
+                <h3>NTI Gymnasiet Södertörn (Information and Media Technology Program)</h3>
+                <small>High School Diploma</small>
+                <p class="textDescription">During my high school years, I specialized in information and media technology. This
+                program allowed me to explore programming, web development, design, 3D printing,
+                and hardware management. It deepened my interest in technology and provided a
+                solid foundation for my future career aspirations.</p>
+
+                <hr>
+
+                <h2 class="textHeader">About Me</h2>
+                <p class="textDescription">In my free time, I enjoy training, video games, and TV series. I have a strong
+                passion for technology and problem-solving and thrive on developing my skills
+                through creating and improving. My internship in Fukuoka, Japan, sparked my
+                interest in international work and cultural exchange. Now, I am looking for
+                opportunities to gain practical experience, build networks, and explore my
+                strengths and interests. I am motivated, eager to learn, and focused on
+                continuous professional and personal growth.</p>
+            </div>
         </section>
     </main>
     </div>

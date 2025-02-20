@@ -7,14 +7,17 @@
     <title>Max Berglund</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/global.css">
-    <script src="/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/getGithubRepos.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="textLogo">
             <div class="navButton">☰</div>
-            <h1><span class="easterEgg">M</span>ax Berglund</h1>
+            <h1>Max <span class="easterEgg">Berg</span>lund</h1>
         </div>
     </header>
     <nav>
@@ -27,24 +30,18 @@
     </nav>
     <main>
         <section>
-            <h2>A Sojourn Into My Craft</h2>
-            <p>Hail, traveler, and be thee welcome to this modest archive of mine own making, where words and works
-                alike stand as
-                echoes of my toil. Lo, but twenty summers have I weathered, and with steady hand do I seek to carve my
-                place amidst
-                the
-                boundless expanse of the machine-mind’s domain. A humble architect of logic, a fledgling weaver of code,
-                I labor yet
-                to
-                shape order from chaos, to bend the silent will of metal and mind alike. Herein shalt thou find a record
-                of my
-                endeavors—projects wrought by mine own hand, each a stepping stone upon the path I tread. Peruse,
-                shouldst thou will
-                it,
-                and glimpse the forging of a journey yet unfurled.</p>
+            <h2 class="textHeader">Highlighted Projects</h2>
+            <p class="textDescription">Here are some of my highlighted projects that showcase my skills and experience in web development. Click on the project titles to learn more about each one.</p>
+            <div class="portfolio-gallery" id="highlighted-projects">
+            </div>
+            <hr>
+            <h2 class="textHeader">All Projects</h2>
+            <p class="textDescription">Below is a collection of all my work, including web development projects, design pieces, and other creative endeavors. Feel free to explore and learn more about my skills and experiences.</p>
+            <div class="portfolio-gallery" id="all-projects">
+            </div>
         </section>
     </main>
-    </div>
+    <script src="https://kit.fontawesome.com/f6f14836e1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

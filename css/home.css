@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 100%;;
 }
 
 .doubleSection section {
@@ -10,6 +10,7 @@
     min-width: 49.5%;
     padding: 20px;
     box-sizing: border-box;
+    padding: 20px 40px;
 }
 
 .socialsContainer {

@@ -1,0 +1,32 @@
+.textDescription {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.textDescription p {
+    margin-bottom: 20px;
+}
+
+section {
+    height: 100%;
+    min-height: fit-content;
+    padding: 2rem 5rem;
+}
+
+section div {
+    background-color: rgb(3, 3, 3);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 0;
+    }
+    section div {
+        border-radius: 0;
+    }
+}
